@@ -1,0 +1,21 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:StockTracker.ViewModels"
+             xmlns:stockTracker="clr-namespace:StockTracker"
+             xmlns:avaloniaApp="clr-namespace:AvaloniaApp"
+             xmlns:services="clr-namespace:AvaloniaApp.Services"
+             xmlns:viewModels1="clr-namespace:AvaloniaApp.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaApp.Views.MainView"
+             d:DataContext="{x:Static avaloniaApp:DesignData.MainViewModel}"
+             services:DialogService.Register="{Binding}"
+             x:DataType="viewModels1:MainViewModel">
+
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="{StaticResource Small}">
+        <TextBlock Text="{Binding Greeting}" />
+        <Button Content="Open file" Command="{Binding OpenFileCommand}"></Button>
+    </StackPanel>
+
+</UserControl>

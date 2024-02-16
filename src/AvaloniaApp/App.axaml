@@ -1,0 +1,28 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:themes="clr-namespace:Material.Styles.Themes;assembly=Material.Styles"
+             xmlns:avalonia="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
+             xmlns:system="clr-namespace:System;assembly=System.Runtime"
+             xmlns:converters="clr-namespace:Avalonia.Controls.Converters;assembly=Avalonia.Controls"
+             x:Class="AvaloniaApp.App"
+             RequestedThemeVariant="Default">
+
+    <Application.Resources>
+        <converters:EnumToBoolConverter x:Key="EnumToBoolConverter" />
+        <system:Double x:Key="Small">4</system:Double>
+        <system:Double x:Key="Medium">8</system:Double>
+        <system:Double x:Key="Large">16</system:Double>
+        <Thickness x:Key="SmallMarginAll">4</Thickness>
+        <Thickness x:Key="SmallMarginLr">4,0</Thickness>
+        <Thickness x:Key="SmallMarginTb">0,4</Thickness>
+        <Thickness x:Key="MediumMarginAll">8</Thickness>
+        <Thickness x:Key="LargeMarginAll">16</Thickness>
+    </Application.Resources>
+
+    <Application.Styles>
+        <avalonia:MaterialIconStyles />
+        <themes:MaterialTheme BaseTheme="Light" PrimaryColor="Cyan" SecondaryColor="Blue"/>
+        <StyleInclude Source="avares://Material.Avalonia.DataGrid/DataGrid.xaml" />
+    </Application.Styles>
+
+</Application>
