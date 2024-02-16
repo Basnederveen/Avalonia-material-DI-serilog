@@ -9,7 +9,7 @@ namespace AvaloniaApp.ViewModels;
 
 public partial class MainViewModel : ViewModelBase
 {
-    [ObservableProperty] private string greeting;
+    [ObservableProperty] private string greeting = "Press the button to select a file";
 
     public MainViewModel(ILogger<MainViewModel> logger)
     {
